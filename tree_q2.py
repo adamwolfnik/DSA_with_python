@@ -40,10 +40,12 @@ def build_product_tree():
     root.add_childern(Hr)
     Hr.add_childern(treenode("Peter","(Recruitment Manager)"))
     Hr.add_childern(treenode("Waqas","(Policy Manager)"))
-    
+    a=IH.get_level()
+    print(a)
     return root
 
 if __name__=='__main__':
     root=build_product_tree()
     root.print_tree(3)
+    
     pass

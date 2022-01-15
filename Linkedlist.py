@@ -98,6 +98,7 @@ if __name__=='__main__':
   l1.insert_at_beginining(5)
   l1.insert_at_beginining(7)
   l1.insert_at_end(8)
+  l1.print()
   l1.insert_list(['apple','orange','mango'])
   n=l1.count_elements()
   print(n)

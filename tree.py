@@ -20,7 +20,7 @@ class treenode:
 
     def print_tree(self,field):
         self.field=field
-        spaces=" "*self.get_level()*3
+        spaces="\t"*self.get_level()
         prefix=spaces+"|---" if self.parent else ""
         if field=="Both":
             print(prefix+self.name+' '+self.designation)
@@ -40,12 +40,14 @@ def build_product_tree():
     CTO.add_childern(treenode("Aamir","(Application Head)"))
     Hr=treenode("gels","(Hr)")
     root.add_childern(Hr)
-    Hr.add_childern(treenode("Peter","(Recruitment Manager)"))
+    rm=treenode("Peter","(Recruitment Manager)")
+    Hr.add_childern(rm)
     Hr.add_childern(treenode("Waqas","(Policy Manager)"))
+    rm.add_childern(treenode("Waqas","(Intern)"))
     
     return root
 
 if __name__=='__main__':
     root=build_product_tree()
-    root.print_tree("Both")
+    root.print_tree("name")
     pass
