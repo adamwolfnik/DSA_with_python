@@ -82,10 +82,10 @@ class BinaryTreeNode:
     def delete(self,node):
         if node<self.data:
             if self.left:
-                self.left.delete(node)
+                self.left=self.left.delete(node)
         elif node>self.data:
             if self.right:
-                self.right.delete(node)
+                self.right=self.right.delete(node)
         else:
             if self.left is None and self.right is None:
                 return None
